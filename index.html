@@ -17,12 +17,18 @@
 
       .container {
         margin: 10px auto;
-        max-width: 600px;
+        max-width: 800px;
         background: white;
         opacity: 0.8;
         padding: 20px;
         border-radius: 10px;
       }
+      .img1:hover {
+        filter: grayscale(50%);
+        transition: all 150ms ease-in-out;
+        transform: scale(1.2);
+      }
+
       img {
         max-width: 100%;
       }
@@ -52,6 +58,22 @@
         margin: 10px;
         text-align: center;
       }
+
+      .grid {
+        display: grid;
+        margin: 10px 0;
+        border-radius: 4px;
+        grid-gap: 10px;
+        /* grid-template-columns: repeat(4, 150px);*/
+        grid-template-columns: repeat(4, 1fr);
+        /*1fr = one fractional unit: dzieli przestrzeń z uwzględnieniem wzystkich padding, margin itp */
+        /*1fr 2fr 1fr */
+        /*taki zapis stworzy 3 kolumny, z których pierwsza i ostatnia będą miały szerokość "1", a środkowa "2"*/
+      }
+      .grid img {
+        width: 100%;
+        /*object-fit: cover */
+      }
     </style>
   </head>
   <body>
@@ -59,6 +81,34 @@
     <div class="container">
       <h1>Puzzle</h1>
       <h2>My favorite hobby</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/252/original/puzzle-drewniane-lew-3.jpg?1680636301"
+        alt=""
+        class="img1"
+      />
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/251/original/Puzzle_Krypt-2.jpg?1680636279"
+          alt=""
+          class="image-gallery"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/252/original/puzzle-drewniane-lew-3.jpg?1680636301"
+          alt=""
+          class="image-gallery"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/252/original/puzzle-drewniane-lew-3.jpg?1680636301"
+          alt=""
+          class="image-gallery"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/251/original/Puzzle_Krypt-2.jpg?1680636279"
+          alt=""
+          class="image-gallery"
+        />
+      </div>
       <p>
         Why do puzzles make me happy?
         <br />
@@ -68,33 +118,7 @@
         motivation. Dopamine is released every time we do a puzzle and even
         every time we put a piece in the right place.
       </p>
-
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/252/original/puzzle-drewniane-lew-3.jpg?1680636301"
-        alt=""
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/251/original/Puzzle_Krypt-2.jpg?1680636279"
-        alt=""
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/252/original/puzzle-drewniane-lew-3.jpg?1680636301"
-        alt=""
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/251/original/Puzzle_Krypt-2.jpg?1680636279"
-        alt=""
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/252/original/puzzle-drewniane-lew-3.jpg?1680636301"
-        alt=""
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/251/original/Puzzle_Krypt-2.jpg?1680636279"
-        alt=""
-      />
       <br />
-
       <button>Learn how to puzzle!</button>
     </div>
     <footer>Coded by <a href="" target="_blank">Pati Sz.</a></footer>
